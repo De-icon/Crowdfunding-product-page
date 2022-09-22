@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #FAFAFA;
+}
+
+main{
+    width: 100%;
+    height: 50vh;
+    background-image: url(/images/image-hero-desktop.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .navBar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin:auto;
+        padding: 20px 0;
+
+        img{
+            cursor: pointer;
+        }
+
+        ul{
+            display: flex;
+            
+           
+            li{
+                list-style: none;
+                margin: 0 12px;
+                color: hsl(0, 0, 100%);
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.page{
+    width: 70%;
+    margin: auto;
+    margin-top: -10%;
+    .intro{
+        width: 100%;
+        padding: 40px;
+        background-color: #ffffff;
+        text-align:center;
+        border-radius: 10px;
+
+        .master{
+            transform: translateY(-70px);
+        }
+
+        h1{
+            color: hsl(0, 0%, 0%);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        p{
+            color: hsl(0, 0%, 48%);
+            font-size: 16px;
+            
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .button{
+                padding: 10px 25px;
+                font-size: 16px;
+                color: #ffffff;
+                background-color: hsl(176, 50%, 47%);
+                border-radius: 20px;
+                cursor: pointer;
+            }
+            .button2{
+                background: hsl(0, 0%, 48%);
+                width: 120px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                
+                img{
+                    width: 35%;
+                }
+                p{
+                    color: hsl(0, 0, 0);
+                    font-size: 14px;
+                    margin-left: 5px;
+                }
+            }
+            
+        }
+    }
+}
