@@ -67,6 +67,7 @@ main .navBar ul li {
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 .page .intro .buttons .button {
   padding: 10px 25px;
@@ -91,4 +92,46 @@ main .navBar ul li {
   color: hsl(0deg, 0%, 0%);
   font-size: 14px;
   margin-left: 5px;
+}
+.page .prices {
+  width: 100%;
+  padding: 40px 60px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.page .prices .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page .prices .price .content {
+  padding: 20px;
+  border-right: 1px solid hsl(0deg, 0%, 48%);
+  color: hsl(0deg, 0%, 48%);
+  font-size: 14px;
+}
+.page .prices .price .content span {
+  font-family: 18px;
+  font-weight: 700;
+  font-size: 23px;
+  color: hsl(0deg, 0%, 0%);
+}
+.page .prices .loder {
+  width: 100%;
+  height: 10px;
+  background: hsl(0deg, 0%, 48%);
+  border-radius: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+.page .prices .loder::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 10px;
+  left: 0;
+  border-radius: 20px;
+  background-color: hsl(176deg, 50%, 47%);
 }/*# sourceMappingURL=style.css.map */
