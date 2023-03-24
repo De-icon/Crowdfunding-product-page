@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bai+Jamjuree:ital,wght@0,500;0,600;0,700;1,400&family=Bebas+Neue&family=Commissioner:wght@400;500;700&family=DM+Serif+Display&family=Fredoka+One&family=Inter:wght@400;500;700&family=Karla:wght@400;700&family=Overpass:wght@400;700&family=Poppins:wght@400;500;600;700&family=Rubik+Gemstones&family=Rubik+Vinyl&family=Signika:wght@500&family=Space+Grotesk:wght@500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Commissioner;
 }
 
 body {
   background: #FAFAFA;
+  position: relative;
 }
 
 main {
@@ -15,6 +18,18 @@ main {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+main .ham {
+  opacity: 0;
+  position: fixed;
+  right: 10%;
+  top: 9%;
+}
+main .closeMenu {
+  opacity: 0;
+  position: fixed;
+  right: 10%;
+  top: 9%;
 }
 main .navBar {
   display: flex;
@@ -27,15 +42,21 @@ main .navBar {
 main .navBar img {
   cursor: pointer;
 }
-main .navBar ul {
+main .navBar .links .closeMenu {
+  display: none;
+}
+main .navBar .links ul {
   display: flex;
 }
-main .navBar ul li {
+main .navBar .links ul li {
   list-style: none;
   margin: 0 12px;
   color: hsl(0deg, 0%, 100%);
   font-size: 16px;
   cursor: pointer;
+}
+main .navBar .links ul li:hover {
+  color: hsl(0deg, 2%, 80%);
 }
 
 .page {
@@ -77,6 +98,15 @@ main .navBar ul li {
   border-radius: 20px;
   cursor: pointer;
 }
+.page .intro .buttons .button:hover {
+  background: hsl(175deg, 50%, 21%);
+}
+.page .intro .buttons .button2:hover {
+  background: hsl(0deg, 0%, 75%);
+}
+.page .intro .buttons .button2:hover p {
+  font-size: 0.9rem;
+}
 .page .intro .buttons .button2 {
   background: hsl(0deg, 0%, 48%);
   width: 120px;
@@ -91,7 +121,7 @@ main .navBar ul li {
 .page .intro .buttons .button2 p {
   color: hsl(0deg, 0%, 0%);
   font-size: 14px;
-  margin-left: 5px;
+  margin-right: 10px;
 }
 .page .prices {
   width: 100%;
@@ -108,7 +138,6 @@ main .navBar ul li {
 }
 .page .prices .price .content {
   padding: 20px;
-  border-right: 1px solid hsl(0deg, 0%, 48%);
   color: hsl(0deg, 0%, 48%);
   font-size: 14px;
 }
@@ -117,6 +146,10 @@ main .navBar ul li {
   font-weight: 700;
   font-size: 23px;
   color: hsl(0deg, 0%, 0%);
+}
+.page .prices .price hr {
+  background: hsl(0deg, 0%, 48%);
+  border: 5px;
 }
 .page .prices .loder {
   width: 100%;
@@ -134,4 +167,324 @@ main .navBar ul li {
   left: 0;
   border-radius: 20px;
   background-color: hsl(176deg, 50%, 47%);
+}
+.page .about {
+  width: 100%;
+  padding: 40px 60px;
+  background-color: #ffffff;
+  text-align: left;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.page .about h1 {
+  font-weight: 700;
+}
+.page .about p {
+  margin-top: 15px;
+  padding-right: 15px;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 48%);
+  line-height: 2.5em;
+}
+.page .about .bambooStand {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid hsl(0deg, 0%, 48%);
+  margin-top: 25px;
+}
+.page .about .bambooStand article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .about .bambooStand article p {
+  color: hsl(176deg, 50%, 47%);
+}
+.page .about .bambooStand p {
+  margin: 20px 0;
+}
+.page .about .bambooStand h2 {
+  display: flex;
+  align-items: center;
+}
+.page .about .bambooStand h2 span {
+  margin-left: 5px;
+  font-size: 12px;
+  color: hsl(0deg, 0%, 48%);
+}
+.page .about .bambooStand button {
+  color: white;
+  padding: 15px 20px;
+  background: hsl(176deg, 50%, 47%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.page .about .bambooStand button:hover {
+  background: hsl(175deg, 50%, 21%);
+}
+.page .about .bambooStand .fade {
+  color: hsl(0deg, 0%, 48%);
+}
+.page .about .bambooStand .fade p {
+  color: hsl(176deg, 31%, 61%);
+}
+.page .about .bambooStand .fadeBtn {
+  background: hsl(0deg, 0%, 48%);
+}
+
+.modal-ctn {
+  display: none;
+}
+
+.modal-ctn .buy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(125, 125, 125, 0.327);
+  display: flex;
+  justify-content: center;
+  z-index: 98;
+}
+.modal-ctn .buy .modal {
+  width: 70%;
+  padding: 40px 60px;
+  max-height: 62%;
+  background-color: #ffffff;
+  text-align: left;
+  border-radius: 10px;
+  margin-top: 150px;
+}
+.modal-ctn .buy .modal article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.modal-ctn .buy .modal .bambooStand {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid hsl(0deg, 0%, 48%);
+  margin-top: 25px;
+}
+.modal-ctn .buy .modal .bambooStand label {
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+}
+.modal-ctn .buy .modal .bambooStand label input {
+  margin-right: 10px;
+}
+.modal-ctn .buy .modal .bambooStand label article {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.modal-ctn .buy .modal .bambooStand label article p {
+  color: hsl(176deg, 50%, 47%);
+}
+.modal-ctn .buy .modal .bambooStand .Success {
+  display: none;
+}
+.modal-ctn .buy .modal .bambooStand .Success .open {
+  width: 100%;
+  border-top: 1px solid hsl(0deg, 0%, 48%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-ctn .buy .modal .bambooStand .Success .open input {
+  padding: 13px 20px;
+  width: 80px;
+  border-radius: 50px;
+  border: 1px solid hsl(0deg, 0%, 48%);
+  outline: none;
+}
+.modal-ctn .buy .modal .bambooStand p {
+  margin: 20px 0;
+}
+.modal-ctn .buy .modal .bambooStand h2 {
+  display: flex;
+  align-items: center;
+}
+.modal-ctn .buy .modal .bambooStand h2 span {
+  margin-left: 5px;
+  font-size: 12px;
+  color: hsl(0deg, 0%, 48%);
+}
+.modal-ctn .buy .modal .bambooStand button {
+  color: white;
+  padding: 15px 20px;
+  background: hsl(176deg, 50%, 47%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.modal-ctn .buy .modal .bambooStand button:hover {
+  background: hsl(175deg, 50%, 21%);
+}
+.modal-ctn .buy .modal .bambooStand .fade {
+  color: hsl(0deg, 0%, 48%);
+}
+.modal-ctn .buy .modal .bambooStand .fade p {
+  color: hsl(176deg, 31%, 61%);
+}
+.modal-ctn .buy .modal .bambooStand .fadeBtn {
+  background: hsl(0deg, 0%, 48%);
+}
+
+.modal2 {
+  display: none;
+}
+
+.modal2 .complet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(125, 125, 125, 0.327);
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+}
+.modal2 .complet .gotIt {
+  width: 400px;
+  height: 300px;
+  padding: 5PX 20PX;
+  margin-top: 150px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.modal2 .complet .gotIt h2 {
+  margin: 10px 0;
+}
+.modal2 .complet .gotIt p {
+  margin: 20px;
+  color: hsl(0deg, 0%, 48%);
+}
+.modal2 .complet .gotIt button {
+  color: white;
+  padding: 15px 20px;
+  background: hsl(176deg, 50%, 47%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.modal2 .complet .gotIt button:hover {
+  background: hsl(175deg, 50%, 21%);
+}
+
+@media (min-width: 431px) {
+  .ham {
+    position: fixed;
+    right: 10%;
+    top: 9%;
+  }
+  .closeMenu {
+    position: fixed;
+    right: 10%;
+    top: 9%;
+  }
+}
+@media (max-width: 500px) {
+  .navBar .links {
+    display: none;
+    position: fixed;
+    background: hsl(176deg, 50%, 47%);
+    border-radius: 10px;
+    width: 80%;
+    top: 20%;
+    text-align: center;
+    z-index: 2;
+    transition: all 0.5s ease;
+    padding: 10px;
+    margin: auto;
+  }
+  .navBar .links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navBar .links ul .midull {
+    border-top: 1px solid hsl(0deg, 0%, 48%);
+    border-bottom: 1px solid hsl(0deg, 0%, 48%);
+  }
+  .navBar .links ul li {
+    width: 90%;
+    padding: 20px 0;
+    color: black;
+    text-align: left;
+  }
+  .page {
+    width: 95%;
+  }
+  .page .prices {
+    padding: 40px 20px;
+  }
+  .page .prices .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .page .intro h1 {
+    font-size: 1.5rem;
+  }
+  .page .intro .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page .intro .buttons .button2 {
+    width: 45px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  .page .intro .buttons .button2 img {
+    width: 100%;
+  }
+  .page .intro .buttons .button2 p {
+    display: none;
+  }
+  .page .about {
+    padding: 40px 20px;
+  }
+  .page .about h2 {
+    font-size: 1.5rem;
+  }
+  .page .about .bambooStand article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal-ctn .modal {
+    width: 95%;
+    padding: 40px 20px;
+    height: 47%;
+  }
+  .modal-ctn .modal label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal-ctn .modal label input {
+    margin-bottom: 10px;
+  }
+  .modal-ctn .modal label article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: none;
+  }
 }/*# sourceMappingURL=style.css.map */
