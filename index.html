@@ -31,7 +31,7 @@
         <h1>Mastercraft Bamboo Monitor Riser</h1>
         <p> A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
         <div class="buttons">
-          <div class="button">Back this project</div>
+          <div class="button" id="backProject">Back this project</div>
           <div class="button2"> <img src="/images/icon-bookmark.svg"> <p>Bookmark</p></div>
         </div>
         
@@ -108,14 +108,14 @@
   
 
    <!-- Selection modal start -->
-    <div class="modal-ctn">
+    <div class="modal-ctn" id="modalCtn">
       <div class="modal">
         <article>
           <h1>Back this project</h1> 
-          <img src="/images/icon-close-modal.svg">
+          <img src="/images/icon-close-modal.svg" id="closeModal">
         </article>
         <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-        <div class="bambooStand">
+        <div class="bambooStand1">
           <label>  <input type="radio" name="radio" />
             <h3>Pledge with no reward</h3>
           </label>
@@ -127,7 +127,7 @@
           
         </div>
 
-        <div class="bambooStand">
+        <div class="bambooStand1" id="yo">
           <label>  <input type="radio" name="radio" />
             <article>
               <h3>Bamboo stand</h3> 
@@ -143,17 +143,17 @@
               <h2>101 <span>left</span></h2>
 
             </article>
-            <div class="Success">
+            <div class="Successful">
               <p>Enter your pledge</p>
               <div>
                 <input type="text" placeholder="₦20">
-              <button>continue</button>
+              <button class="continueModal">continue</button>
               </div>
               
             </div>
           </div>
 
-        <div class="bambooStand">
+        <div class="bambooStand1">
           <label>  <input type="radio" name="radio" />
             <article>
               <h3>Black Edition Stand</h3> 
@@ -169,18 +169,18 @@
             <article>
               <h2>64 <span>left</span></h2>
             </article>
-            <div class="Success">
+            <div class="Successful">
               <p>Enter your pledge</p>
               <div>
                 <input type="text" placeholder="₦20">
-              <button>continue</button>
+              <button class="continueModal">continue</button>
               </div>
               
             </div>
           
         </div>
 
-        <div class="bambooStand">
+        <div class="bambooStand1">
           <label>  <input type="radio" name="radio" />
             <article class="fade">
               <h3>Mahogany Special Edition</h3> 
@@ -202,7 +202,7 @@
       </div>
     </div>
      <!-- Success modal end -->
-    <div class="modal2">
+    <div class="modal2" id="modal2">
       <div class="gotIt">
         <img src="/images/icon-check.svg" >
         <h2>Thanks for your support</h2>
@@ -210,10 +210,10 @@
           Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
           an email once our campaign is completed.
         </p>
-        <button>Got it!</button>
+        <button id="gotIt">Got it!</button>
       </div>
     </div>
 
- 
+ <script src="/script.js"></script>
 </body>
 </html>

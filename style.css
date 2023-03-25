@@ -235,21 +235,18 @@ main .navBar .links ul li:hover {
 }
 
 .modal-ctn {
-  display: none;
-}
-
-.modal-ctn .buy {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(125, 125, 125, 0.327);
-  display: flex;
+  display: none;
   justify-content: center;
   z-index: 98;
+  transition: all 1s;
 }
-.modal-ctn .buy .modal {
+.modal-ctn .modal {
   width: 70%;
   padding: 40px 60px;
   max-height: 62%;
@@ -258,65 +255,62 @@ main .navBar .links ul li:hover {
   border-radius: 10px;
   margin-top: 150px;
 }
-.modal-ctn .buy .modal article {
+.modal-ctn .modal article {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.modal-ctn .buy .modal .bambooStand {
+.modal-ctn .modal .bambooStand1 {
   width: 100%;
   padding: 20px;
   border-radius: 5px;
   border: 1px solid hsl(0deg, 0%, 48%);
   margin-top: 25px;
 }
-.modal-ctn .buy .modal .bambooStand label {
+.modal-ctn .modal .bambooStand1 label {
   display: flex;
   cursor: pointer;
   width: 100%;
 }
-.modal-ctn .buy .modal .bambooStand label input {
+.modal-ctn .modal .bambooStand1 label input {
   margin-right: 10px;
 }
-.modal-ctn .buy .modal .bambooStand label article {
+.modal-ctn .modal .bambooStand1 label article {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.modal-ctn .buy .modal .bambooStand label article p {
+.modal-ctn .modal .bambooStand1 label article p {
   color: hsl(176deg, 50%, 47%);
 }
-.modal-ctn .buy .modal .bambooStand .Success {
-  display: none;
-}
-.modal-ctn .buy .modal .bambooStand .Success .open {
+.modal-ctn .modal .bambooStand1 .Successful {
   width: 100%;
   border-top: 1px solid hsl(0deg, 0%, 48%);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
-.modal-ctn .buy .modal .bambooStand .Success .open input {
+.modal-ctn .modal .bambooStand1 .Successful input {
   padding: 13px 20px;
   width: 80px;
   border-radius: 50px;
   border: 1px solid hsl(0deg, 0%, 48%);
   outline: none;
 }
-.modal-ctn .buy .modal .bambooStand p {
+.modal-ctn .modal .bambooStand1 p {
   margin: 20px 0;
 }
-.modal-ctn .buy .modal .bambooStand h2 {
+.modal-ctn .modal .bambooStand1 h2 {
   display: flex;
   align-items: center;
 }
-.modal-ctn .buy .modal .bambooStand h2 span {
+.modal-ctn .modal .bambooStand1 h2 span {
   margin-left: 5px;
   font-size: 12px;
   color: hsl(0deg, 0%, 48%);
 }
-.modal-ctn .buy .modal .bambooStand button {
+.modal-ctn .modal .bambooStand1 button {
   color: white;
   padding: 15px 20px;
   background: hsl(176deg, 50%, 47%);
@@ -324,35 +318,31 @@ main .navBar .links ul li:hover {
   border-radius: 50px;
   cursor: pointer;
 }
-.modal-ctn .buy .modal .bambooStand button:hover {
+.modal-ctn .modal .bambooStand1 button:hover {
   background: hsl(175deg, 50%, 21%);
 }
-.modal-ctn .buy .modal .bambooStand .fade {
+.modal-ctn .modal .bambooStand1 .fade {
   color: hsl(0deg, 0%, 48%);
 }
-.modal-ctn .buy .modal .bambooStand .fade p {
+.modal-ctn .modal .bambooStand1 .fade p {
   color: hsl(176deg, 31%, 61%);
 }
-.modal-ctn .buy .modal .bambooStand .fadeBtn {
+.modal-ctn .modal .bambooStand1 .fadeBtn {
   background: hsl(0deg, 0%, 48%);
 }
 
 .modal2 {
-  display: none;
-}
-
-.modal2 .complet {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(125, 125, 125, 0.327);
-  display: flex;
+  display: none;
   justify-content: center;
   z-index: 99;
 }
-.modal2 .complet .gotIt {
+.modal2 .gotIt {
   width: 400px;
   height: 300px;
   padding: 5PX 20PX;
@@ -365,14 +355,14 @@ main .navBar .links ul li:hover {
   justify-content: center;
   text-align: center;
 }
-.modal2 .complet .gotIt h2 {
+.modal2 .gotIt h2 {
   margin: 10px 0;
 }
-.modal2 .complet .gotIt p {
+.modal2 .gotIt p {
   margin: 20px;
   color: hsl(0deg, 0%, 48%);
 }
-.modal2 .complet .gotIt button {
+.modal2 .gotIt button {
   color: white;
   padding: 15px 20px;
   background: hsl(176deg, 50%, 47%);
@@ -381,7 +371,7 @@ main .navBar .links ul li:hover {
   cursor: pointer;
   font-size: 18px;
 }
-.modal2 .complet .gotIt button:hover {
+.modal2 .gotIt button:hover {
   background: hsl(175deg, 50%, 21%);
 }
 
