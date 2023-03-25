@@ -6,8 +6,11 @@ const bambooStand1 = document.querySelector(".bambooStand1")
 const modal2 = document.querySelector("#modal2")
 const closeModal = document.querySelector("#closeModal")
 const gotIt = document.querySelector("#gotIt")
-const Successful = document.querySelectorAll(".Successful")
+const Successful = document.getElementsByClassName("Successful")
 let yo = document.querySelector('#yo')
+let yoo = document.querySelector('#yoo')
+
+
 //? command to open the modal
 
 backProject.addEventListener("click", () => {
@@ -19,9 +22,11 @@ closeModal.addEventListener("click", () => {
 })
 
 yo.addEventListener("click", () => {
-    // Successful.style.display = "flex"
-    console.log("it work");
+    Successful.style.display = "flex"
 })
+// yoo.addEventListener("click", () => {
+//     Successful.style.display = "flex"
+// })
 
 // bambooStand1.forEach(bambooStand1 => {
 //     const Successful = document.querySelectorAll(".Successful")
